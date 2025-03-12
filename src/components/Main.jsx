@@ -13,7 +13,7 @@ function Main() {
 			// Get city id
 			setIsLoading(true);
 			setErrMsg("");
-			const res1 = await fetch(`https://api.makcorps.com/mapping?api_key=${API_KEY}&name=${filters.destination}`);
+			const res1 = await fetch(`https://api.makcorps.com/mapping?api_key=${API_KEY}&name=${encodeURIComponent(filters.destination)}`);
 
 			if (!res1.ok) throw new Error("Error: Cannot Get City Id!");
 
