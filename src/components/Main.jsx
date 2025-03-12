@@ -42,11 +42,11 @@ function Main() {
 	};
 
 	return (
-		<main className="flex flex-col-reverse justify-end px-5 xl:flex-row h-[82dvh] text-amber-50">
+		<main className="flex flex-col-reverse gap-5 justify-end px-5 xl:flex-row h-[82dvh] text-amber-50">
 			<section className="xl:w-[70vw] overflow-y-auto results-section">
 				{/* Only one thing from the following will be true */}
-				{isLoading && <p className="text-white text-center mt-6 text-large font-semibold">Loading...</p>}
-				{errMsg && <p className="text-white text-center mt-6 text-large font-semibold">{errMsg}</p>}
+				{isLoading && <p className="text-brand text-center mt-6 text-large font-semibold">Loading...</p>}
+				{errMsg && <p className="text-brand text-center mt-6 text-large font-semibold">{errMsg}</p>}
 				{!isLoading && !errMsg && <Results results={searchResults} />}
 			</section>
 			<SearchForm onSearch={handleSearch} />

@@ -1,13 +1,13 @@
 function Results({ results }) {
-	if (!results || results.length === 0) return <p className="text-white text-center mt-6 text-large font-semibold">Please, fill the form 😉 </p>;
+	if (!results || results.length === 0) return <p className="text-brand text-center mt-6 text-large font-semibold">Please, fill the form </p>;
 
 	// Hotel image is not available in Makcorps
 
 	return (
-		<div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 			{results.map((hotel, i) => (
-				<div key={i} className="bg-white rounded-2xl shadow-lg p-6 w-full">
-					<h2 className="text-small font-extrabold text-gray-900 mb-2">{hotel.name}</h2>
+				<div key={i} className="bg-[#d1d5db] rounded-lg shadow-lg p-4 w-full">
+					<h2 className="text-small md:text-md font-extrabold text-gray-900 mb-2">{hotel.name}</h2>
 					<p className="text-sm text-gray-600">📞 {hotel.telephone}</p>
 					{hotel.reviews && (
 						<div className="flex items-center mt-2">
@@ -15,7 +15,7 @@ function Results({ results }) {
 							<span className="ml-2 text-sm text-gray-500">({hotel.reviews.count} reviews)</span>
 						</div>
 					)}
-					<div className="grid grid-cols-2 gap-x-8 mt-2 space-y-1 text-amber-950 text-sm">
+					<div className="grid grid-cols-2 gap-x-8 mt-2 space-y-1 text-gray-900 text-sm">
 						{hotel.vendor1 && (
 							<p className="flex justify-between">
 								<span className="font-medium">{hotel.vendor1}</span>

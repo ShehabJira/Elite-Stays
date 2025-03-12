@@ -1,11 +1,10 @@
 @import "tailwindcss";
 @theme {
-	--color-main: #d2b46a;
-	--color-primary: #c29b3b;
-	--color-primary-glare: rgba(194, 155, 59, 0.65);
-	--color-brown: #481412;
-	--color-brown-light: #a22d28;
-	--color-secondary: #e0cc9b;
+	--color-primary: #111827;
+	--color-secondary: #18212f;
+	--color-brand: #e5e7eb;
+	--color-main-brand: #f9fafb;
+
 	/* text-size */
 	--text-small: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.8rem);
 	--text-medium: clamp(0.83rem, calc(0.78rem + 0.29vw), 1rem);
@@ -26,23 +25,25 @@
 }
 body {
 	margin: 0;
-	background-color: #d2b46a;
+	background-color: #111827;
 	font-family: Arial, Helvetica, sans-serif;
 	input,
 	select {
-		background-color: rgba(194, 155, 59, 0.65);
-		border-color: #481412;
-		color: #481412;
+		color: #e5e7eb;
+		border: 1px solid #4b5563;
+		background-color: #18212f;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 	}
 	::placeholder {
-		color: #481412;
+		color: #e5e7eb;
 	}
 	input:focus,
 	select:focus {
 		outline: none;
 	}
 	label {
-		color: #481412;
+		color: #e5e7eb;
 	}
 }
 .results-section {

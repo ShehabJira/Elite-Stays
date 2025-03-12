@@ -14,8 +14,8 @@ function SearchForm({ onSearch }) {
 	};
 
 	return (
-		<aside className="xl:grow">
-			<form className="p-6 pt-0 grid gap-4 grid-cols-3 xl:grid-cols-1" onSubmit={handleSearch}>
+		<aside className="xl:grow bg-secondary rounded-md border border-[#1f2937]">
+			<form className="p-6 grid gap-4 grid-cols-3 xl:grid-cols-1" onSubmit={handleSearch}>
 				<div>
 					<label className="block text-sm font-medium">Destination</label>
 					<input
@@ -86,7 +86,7 @@ function SearchForm({ onSearch }) {
 				</div>
 
 				<div className="col-span-full flex justify-center">
-					<button type="submit" className="bg-brown text-gold px-6 py-2 rounded-md hover:opacity-80 transition cursor-pointer">
+					<button type="submit" className="bg-[#4f46e5] text-gold px-6 py-2 rounded-md hover:bg-[#4338ca] transition cursor-pointer">
 						Search Hotels
 					</button>
 				</div>
