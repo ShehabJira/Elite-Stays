@@ -15,7 +15,7 @@ function Main() {
 			setErrMsg("");
 			const res1 = await fetch(`https://api.makcorps.com/mapping?api_key=${API_KEY}&name=${encodeURIComponent(filters.destination)}`);
 
-			if (!res1.ok) throw new Error("Error: Cannot Get City Id!");
+			if (!res1.ok) throw new Error("Cannot Get City Id. Try adjusting your search!");
 
 			const data = await res1.json(); // This data contains Hotels, city, and more things. we need to only get the city.
 			const city = data.find((ele) => ele.type === "GEO"); // If the type property has a value of HOTEL then the document_id will be hotel ID and if the type property has a value GEO then the value of document_id will be city ID.
@@ -26,7 +26,7 @@ function Main() {
 				`https://api.makcorps.com/city?cityid=${cityId}&cur=USD&adults=${filters.adults}&children=${filters.children}&rooms=1&pagination=0&checkin=${filters.checkIn}&checkout=${filters.checkOut}&api_key=${API_KEY}`
 			);
 
-			if (!res2.ok) throw new Error("Error: Cannot Get Hotels in this city!");
+			if (!res2.ok) throw new Error("Cannot Get Hotels in this city. Try adjusting your search!");
 
 			const results = await res2.json(); // results contains all hotels based on the obtained filters.
 
