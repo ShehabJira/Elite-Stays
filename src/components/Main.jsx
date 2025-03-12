@@ -3,7 +3,7 @@ import Results from "./Results";
 import SearchForm from "./SearchForm";
 
 function Main() {
-	const API_KEY = "67d0dedaa794615a49743d37";
+	const API_KEY = "67d1982538d0825a40cc632e";
 	const [searchResults, setSearchResults] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [errMsg, setErrMsg] = useState("");
